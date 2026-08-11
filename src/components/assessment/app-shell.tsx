@@ -2,6 +2,7 @@ import { GraduationCap } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { ProgressIndicator } from "@/components/assessment/progress-indicator";
+import { useLanguage } from "@/lib/i18n/language-context";
 
 /** Application chrome: header, progress area, main content region. */
 export function AppShell({
@@ -15,6 +16,7 @@ export function AppShell({
   totalSteps: number;
   showProgress?: boolean;
 }) {
+  const { t } = useLanguage();
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <header className="sticky top-0 z-20 border-b border-border bg-background/85 backdrop-blur">
@@ -24,8 +26,8 @@ export function AppShell({
               <GraduationCap className="size-5" />
             </span>
             <div className="min-w-0">
-              <p className="truncate text-sm font-semibold sm:text-base">Learning Preference</p>
-              <p className="truncate text-xs text-muted-foreground">Student assessment</p>
+              <p className="truncate text-sm font-semibold sm:text-base">{t("appName")}</p>
+              <p className="truncate text-xs text-muted-foreground">{t("appTagline")}</p>
             </div>
           </div>
         </div>
@@ -40,7 +42,7 @@ export function AppShell({
 
       <footer className="border-t border-border py-5">
         <p className="mx-auto max-w-3xl px-4 text-center text-xs text-muted-foreground sm:px-6">
-          Your answers stay on this device.
+          {t("privacyNote")}
         </p>
       </footer>
     </div>
