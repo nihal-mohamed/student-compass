@@ -2,8 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { AppShell, StepPanel } from "@/components/assessment/app-shell";
 import { NavigationControls } from "@/components/assessment/navigation-controls";
+import { LanguageStep } from "@/components/assessment/steps/language-step";
 import { AssessmentProvider, useAssessment } from "@/lib/assessment/assessment-context";
 import { ASSESSMENT_STEPS } from "@/lib/assessment/steps";
+import { LanguageProvider, useLanguage } from "@/lib/i18n/language-context";
 
 export const Route = createFileRoute("/")({
   head: () => ({
