@@ -2,6 +2,7 @@ import { GraduationCap } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { ProgressIndicator } from "@/components/assessment/progress-indicator";
+import { useLanguage } from "@/lib/i18n/language-context";
 
 /** Application chrome: header, progress area, main content region. */
 export function AppShell({
