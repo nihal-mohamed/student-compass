@@ -41,7 +41,7 @@ export function AssessmentProvider({ children }: { children: ReactNode }) {
   const value = useMemo<AssessmentContextValue>(() => {
     const total = ASSESSMENT_STEPS.length;
     return {
-      step: ASSESSMENT_STEPS[index].id,
+      step: ASSESSMENT_STEPS[index]!.id,
       stepNumber: index + 1,
       totalSteps: total,
       answers,
