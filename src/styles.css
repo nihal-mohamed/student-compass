@@ -108,8 +108,12 @@
 }
 
 .dark {
+  --surface: oklch(0.24 0.03 220);
+  --surface-foreground: oklch(0.95 0.01 200);
+  --shadow-soft-value: 0 1px 2px oklch(0 0 0 / 0.3), 0 12px 28px oklch(0 0 0 / 0.35);
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
+
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);
