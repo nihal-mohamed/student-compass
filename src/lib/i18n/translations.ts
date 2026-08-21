@@ -29,6 +29,7 @@ type Dictionary = {
   languageTamil: string;
   languageEnglishHint: string;
   languageTamilHint: string;
+<<<<<<< HEAD
   formatTitle: string;
   formatText: string;
   formatAudio: string;
@@ -89,6 +90,8 @@ type Dictionary = {
   speakingRequired: string;
   speakingPermissionDenied: string;
   speakingUnsupported: string;
+=======
+>>>>>>> origin/main
 };
 
 export const TRANSLATIONS: Record<LanguageCode, Dictionary> = {
@@ -106,6 +109,7 @@ export const TRANSLATIONS: Record<LanguageCode, Dictionary> = {
     languageTamil: "தமிழ்",
     languageEnglishHint: "Answer the assessment in English.",
     languageTamilHint: "Answer the assessment in Tamil.",
+<<<<<<< HEAD
     formatTitle: "How would you like to receive the questions?",
     formatText: "📝 Text",
     formatAudio: "🔊 Audio",
@@ -168,6 +172,8 @@ export const TRANSLATIONS: Record<LanguageCode, Dictionary> = {
     speakingRequired: "Please provide a recording before continuing.",
     speakingPermissionDenied: "Microphone access was denied. Please allow microphone access in your browser settings and try again.",
     speakingUnsupported: "Recording is not supported by this browser. Please use a browser that supports microphone recording.",
+=======
+>>>>>>> origin/main
   },
   ta: {
     appName: "கற்றல் விருப்பம்",
@@ -183,6 +189,7 @@ export const TRANSLATIONS: Record<LanguageCode, Dictionary> = {
     languageTamil: "தமிழ்",
     languageEnglishHint: "மதிப்பீட்டை ஆங்கிலத்தில் பதிலளிக்கவும்.",
     languageTamilHint: "மதிப்பீட்டை தமிழில் பதிலளிக்கவும்.",
+<<<<<<< HEAD
     formatTitle: "கேள்விகளை எவ்வாறு பெற விரும்புகிறீர்கள்?",
     formatText: "📝 உரை",
     formatAudio: "🔊 ஒலி",
@@ -246,6 +253,8 @@ export const TRANSLATIONS: Record<LanguageCode, Dictionary> = {
     speakingRequired: "தொடர்வதற்கு முன் ஒரு பதிவை உருவாக்கவும்.",
     speakingPermissionDenied: "ஒலிவாங்கி அணுகல் மறுக்கப்பட்டது. உலாவி அமைப்புகளில் ஒலிவாங்கி அணுகலை அனுமதித்து மீண்டும் முயற்சிக்கவும்.",
     speakingUnsupported: "இந்த உலாவியில் பதிவு செய்யும் வசதி ஆதரிக்கப்படவில்லை. ஒலிவாங்கி பதிவை ஆதரிக்கும் உலாவியைப் பயன்படுத்தவும்.",
+=======
+>>>>>>> origin/main
   },
 };
 
