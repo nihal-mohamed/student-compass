@@ -3,13 +3,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { AppShell, StepPanel } from "@/components/assessment/app-shell";
 import { NavigationControls } from "@/components/assessment/navigation-controls";
 import { LanguageStep } from "@/components/assessment/steps/language-step";
-<<<<<<< HEAD
 import { FormatStep } from "@/components/assessment/steps/format-step";
 import { QuestionOne } from "@/components/assessment/steps/question-one";
 import { QuestionTwo } from "@/components/assessment/steps/question-two";
 import { ProfileStep } from "@/components/assessment/steps/profile-step";
-=======
->>>>>>> origin/main
 import { AssessmentProvider, useAssessment } from "@/lib/assessment/assessment-context";
 import { ASSESSMENT_STEPS } from "@/lib/assessment/steps";
 import { LanguageProvider, useLanguage } from "@/lib/i18n/language-context";
@@ -49,11 +46,7 @@ function AssessmentPage() {
  * prompt; the language step is implemented, the rest use the shell panel.
  */
 function AssessmentFlow() {
-<<<<<<< HEAD
   const { step, stepNumber, totalSteps, next, back, canGoBack, canGoNext, answers } = useAssessment();
-=======
-  const { step, stepNumber, totalSteps, next, back, canGoBack, canGoNext } = useAssessment();
->>>>>>> origin/main
   const { t } = useLanguage();
   const label = ASSESSMENT_STEPS[stepNumber - 1]?.label ?? "";
 
@@ -61,7 +54,6 @@ function AssessmentFlow() {
     <AppShell currentStep={stepNumber} totalSteps={totalSteps}>
       {step === "language" ? (
         <LanguageStep onNext={next} />
-<<<<<<< HEAD
       ) : step === "format" ? (
         <FormatStep onNext={next} onBack={back} />
       ) : step === "question-1" ? (
@@ -75,8 +67,6 @@ function AssessmentFlow() {
         <QuestionTwo onNext={next} onBack={back} />
       ) : step === "profile" ? (
         <ProfileStep onBack={back} />
-=======
->>>>>>> origin/main
       ) : (
         <StepPanel
           title={label}
@@ -102,7 +92,3 @@ function AssessmentFlow() {
     </AppShell>
   );
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main

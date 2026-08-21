@@ -1,10 +1,7 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
 
 import { ASSESSMENT_STEPS, stepIndex, type AssessmentStepId } from "./steps";
-<<<<<<< HEAD
 import { calculateLearningProfiles, type LearningProfile } from "./learning-profile";
-=======
->>>>>>> origin/main
 
 /**
  * Local, in-memory state for the assessment flow.
@@ -13,7 +10,6 @@ import { calculateLearningProfiles, type LearningProfile } from "./learning-prof
  */
 export type AssessmentAnswers = {
   language?: string;
-<<<<<<< HEAD
   format?: "text" | "audio" | "video";
   learningMethods?: string[];
   explanationModes?: string[];
@@ -22,11 +18,6 @@ export type AssessmentAnswers = {
   speakingDuration?: number;
   typingResponse?: string;
   drawingData?: string;
-=======
-  format?: string;
-  learningMethods?: string[];
-  explanationModes?: string[];
->>>>>>> origin/main
 };
 
 type AssessmentContextValue = {
@@ -34,10 +25,7 @@ type AssessmentContextValue = {
   stepNumber: number;
   totalSteps: number;
   answers: AssessmentAnswers;
-<<<<<<< HEAD
   learningProfiles: LearningProfile[];
-=======
->>>>>>> origin/main
   setAnswers: (patch: Partial<AssessmentAnswers>) => void;
   goTo: (step: AssessmentStepId) => void;
   next: () => void;
@@ -64,10 +52,7 @@ export function AssessmentProvider({ children }: { children: ReactNode }) {
       stepNumber: index + 1,
       totalSteps: total,
       answers,
-<<<<<<< HEAD
       learningProfiles: calculateLearningProfiles(answers.learningMethods ?? []),
-=======
->>>>>>> origin/main
       setAnswers,
       goTo: (step) => setIndex(Math.max(0, stepIndex(step))),
       next: () => setIndex((i) => Math.min(i + 1, total - 1)),
